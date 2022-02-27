@@ -1,6 +1,6 @@
 spring:
   application:
-    name: usuario-microservicio
+    name: moto-microservicio
   cloud:
     config:
       enabled: true
