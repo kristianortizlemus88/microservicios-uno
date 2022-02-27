@@ -1,0 +1,15 @@
+server:
+  port: 8091
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: config-server
+          uri: https://github.com/kristianortizlemus88/microservicios-uno
+          search-paths: datos-configuracion
+
+
+  application:
+    name: servicio-configuracion

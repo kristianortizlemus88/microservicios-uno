@@ -1,0 +1,6 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://adminms:Boyano88@cluster0.gp70h.mongodb.net/productos?retryWrites=true&w=majority
