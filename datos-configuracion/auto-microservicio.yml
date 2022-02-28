@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: ${PORT:${SERVER_PORT:0}}
 spring:
   data:
     mongodb:
@@ -7,6 +7,7 @@ spring:
 eureka:
   instance:
     hostname: localhost
+    instance-id: ${spring.application.name}:${random.uuid}
   client:
     fetch-registry: true
     register-with-eureka: true
