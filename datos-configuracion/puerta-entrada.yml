@@ -35,15 +35,12 @@ spring:
     oauth2:
       client:
         provider:
-          keycloak:
-            authorization-uri: http://0.0.0.0:8280/realms/tutorial-realm/protocol/openid-connect/auth
-            userinfo-uri: http://0.0.0.0:8280/realms/tutorial-realm/protocol/openid-connect/userinfo
-            user-name-attribute: preferred_username
-            token-uri: http://0.0.0.0:8280/realms/tutorial-realm/protocol/openid-connect/token
-          registration:
-            tutorial-client:
-              provider: keycloak
-              client-id: tutorial-client
-              client-secret: ixLwEfBBPyxSRQGsDYeBqylt6ixFDIUz
-              authorization-grant-type: authorization_code
-              redirect-uri: "{baseUrl}/login/oauth2/code/tutorial-client"
+          my-keycloak-provider:
+            issuer-uri: http://localhost:8280/auth/realms/My-Realm
+        registration:
+          keycloak-spring-gateway-client:
+            provider: my-keycloak-provider
+            client-id: spring-gateway-application
+            client-secret: 9050ff37-f168-4232-97b0-683efdc54a20
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
