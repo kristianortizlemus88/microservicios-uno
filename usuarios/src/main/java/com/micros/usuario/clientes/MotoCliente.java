@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "moto-microservicio", url = "http://localhost:8082", path = "/v1/motos")
+@FeignClient(name = "moto-microservicio", path = "/v1/motos")
 public interface MotoCliente {
 
     @PostMapping()

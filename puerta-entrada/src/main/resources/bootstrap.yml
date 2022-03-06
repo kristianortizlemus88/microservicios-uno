@@ -1,6 +1,6 @@
 spring:
   application:
-    name: moto-microservicio
+    name: puerta-entrada
   cloud:
     config:
       enabled: true

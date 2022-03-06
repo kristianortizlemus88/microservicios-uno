@@ -35,4 +35,13 @@ public class MotoController {
         return ResponseEntity.ok(MotoRepository.findByUsuarioId(usuarioId));
     }
 
+
+    private void metodo(String prueba){
+        System.out.println(prueba);
+    }
+
+    public void metodo(String prueba, String prueba2){
+        System.out.println(prueba);
+    }
+
 }
